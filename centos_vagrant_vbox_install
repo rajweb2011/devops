@@ -1,0 +1,23 @@
+#here are the steps how to install vagrant in rhel 7  
+1. download virtuvalbox first 
+     - cd /etc/yum.repos.d/
+     - wget http://download.virtualbox.org/virtualbox/rpm/rhel/virtualbox.repo
+     - yum update
+     - rpm -Uvh https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
+     - yum install VirtualBox-5.2
+     
+ 2. install vagrant  got to https://www.vagrantup.com/downloads.html and select your os version here i have selected centos 64bit copy link location 
+    and using wget i will runbelow command to download under 
+    
+     - cd /etc/yum.repos.d/
+     - wget https://releases.hashicorp.com/vagrant/2.0.2/vagrant_2.0.2_x86_64.rpm
+     - yum -y localinstall vagrant_2.0.2_x86_64.rpm
+     
+ 3. install now your v boxs centos / ubunut 
+     goto your home directory  and create folder for vagrant_home  here below i am creating server box 
+     cd /home/rajesh/vagrant-home/
+     mkdir server
+     cd /home/rajesh/vagrant-home/server
+     - vagrant init bento/centos-7.3
+     #it will take some time and isntall centos in your machine 
+     

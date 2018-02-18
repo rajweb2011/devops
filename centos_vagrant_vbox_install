@@ -21,3 +21,25 @@
      - vagrant init bento/centos-7.3
      #it will take some time and isntall centos in your machine 
      
+
+4. insider server folder open vagranntfile add below lines at end and save it 
+
+	 config.vm.define "client" do |client|
+		client.vm.hostname = "client"
+	 end
+	end
+
+   #save file come out
+
+5.start your "vagrant up "
+#it will start your server as client and change hostname as client 
+ config.vm.define "client" do |client|
+	client.vm.hostname = "client"
+  end
+end
+
+- vagrant up 
+- vagrant ssh 
+#once your in the box run below command to add ansible repo to yoru yum repo to install 
+
+-   sudo rpm -ivh https://dl.fedoraproject.org/pub/epel/7/x86_64/Packages/e/epel-release-7-11.noarch.rpm

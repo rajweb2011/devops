@@ -30,3 +30,30 @@ system:admin credentials live in a client certificate. If you get prompted for a
 export KUBECONFIG=/path/to/admin.kubeconfig
 
 Then you will be able to run cluster admin commands.
+
+
+
+4.  ### after install you wont get templete on login screen to fix this please fallow below steps 
+
+https://docs.openshift.org/latest/install_config/imagestreams_templates.html
+
+
+
+You must have cloned the repository that contains the default image streams and templates:
+1.1 download openshift-ansible templet files for db / other temptlets 
+be a root user and fallow below steps 
+$ cd ~
+$ git clone https://github.com/openshift/openshift-ansible
+
+1.2   now export those files ocne its downoad 
+
+$ IMAGESTREAMDIR=~/openshift-ansible/roles/openshift_examples/files/examples/v3.6/image-streams; \
+    DBTEMPLATES=~/openshift-ansible/roles/openshift_examples/files/examples/v3.6/db-templates; \
+    QSTEMPLATES=~/openshift-ansible/roles/openshift_examples/files/examples/v3.6/quickstart-templates
+    
+    
+1.3 $ oc create -f $IMAGESTREAMDIR/image-streams-rhel7.json -n openshift
+    $ oc create -f $DBTEMPLATES -n openshift
+    $ oc create -f $QSTEMPLATES -n openshift
+    
+1.4 logout if your already login to webconsole  and log back in  now you will able to see all templets on screen dashboard

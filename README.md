@@ -1,6 +1,10 @@
 # devops
 this is my first project for devops 
 
+oc command not found error on other placess and you have to use only ./oc  to fid this please run below command from your oc home path 
+
+ex:sudo ln -s /home/rajesh/openshift/oc /bin/oc
+
 
 INSTALL OPENSHIFT ORGIEN AFTER LOGIN USING OC COMMAND YOU WILL SEE SOME ERROR LIKE   
 error YOU WILL GET LIKE BELOW  : ./oc login -u system:admin

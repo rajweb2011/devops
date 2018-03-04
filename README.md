@@ -74,3 +74,12 @@ $ IMAGESTREAMDIR=~/openshift-ansible/roles/openshift_examples/files/examples/v3.
     $ oc create -f $QSTEMPLATES -n openshift
     
 1.4 logout if your already login to webconsole  and log back in  now you will able to see all templets on screen dashboard
+
+
+2.1  some times if you install docker then openshfit orgivne and delete orgivne and download tar or copy tar to diffrent folder and try to start it will start but it wont integrate with docker you will somehting like below errors , and deployment wont happend and pods wont create , 
+
+
+Errors:
+  * bc/myapp is pushing to istag/myapp:latest, but the administrator has not configured the integrated Docker registry.
+  * route/jenkins is routing traffic to svc/jenkins, but either the administrator has not installed a router or the router is not selecting this route.
+  * route/myapp is routing traffic to svc/myapp, but either the administrator has not installed a router or the router is not selecting this route.

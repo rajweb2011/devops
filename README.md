@@ -37,6 +37,19 @@ Then you will be able to run cluster admin commands.
 
 
 
+=================================================
+common errors (background i have installed docker then openshift orgine its not working so i copied downloaded openshift tar to another location and started its working but its not integrated with docker i need to trobleshoot this one )
+
+error: when i run oc status command as devloper to list projects  
+erors:
+  * bc/myapp is pushing to istag/myapp:latest, but the administrator has not configured the integrated Docker registry.
+  * route/jenkins is routing traffic to svc/jenkins, but either the administrator has not installed a router or the router is not selecting this route.
+
+
+
+
+
+
 4.  ### after install you wont get templete on login screen to fix this please fallow below steps 
 
 https://docs.openshift.org/latest/install_config/imagestreams_templates.html

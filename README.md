@@ -35,7 +35,11 @@ export KUBECONFIG=/path/to/admin.kubeconfig
 
 Then you will be able to run cluster admin commands.
 
+to test login as  ./oc login -u system:admin   if you still asking password then you need add .kube config file where you have all user info  exmaple : https://kubernetes.io/docs/concepts/configuration/organize-cluster-access-kubeconfig/
 
+like here  ; export KUBECONFIG=$KUBECONFIG:/home/rajesh/.kube/config
+
+this should deferently fix your issue  now your able to login without any issues "oc login -u system:admin "
 
 =================================================
 common errors (background i have installed docker then openshift orgine its not working so i copied downloaded openshift tar to another location and started its working but its not integrated with docker i need to trobleshoot this one )

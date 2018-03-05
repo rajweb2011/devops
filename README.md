@@ -22,6 +22,14 @@ TO FIX PLESAE USBE BELOW STEPS
 easy way to find   use "locate admin.kubeconfig"
 ex :  /home/rajesh/openshift/openshift.local.config/master/admin.kubeconfig
 
+if your not able to find that admin.kubeconfig  / ~/.kube then it will be hidden in your openshift directory where your "oc" command is there 
+
+or try to run this command it will show paths of that file 
+
+./oadm diagnostics
+
+
+
 2. now exprot that path 
 export KUBECONFIG=/home/rajesh/openshift/openshift.local.config/master/admin.kubeconfig
 

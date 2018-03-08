@@ -95,3 +95,45 @@ Errors:
   * bc/myapp is pushing to istag/myapp:latest, but the administrator has not configured the integrated Docker registry.
   * route/jenkins is routing traffic to svc/jenkins, but either the administrator has not installed a router or the router is not selecting this route.
   * route/myapp is routing traffic to svc/myapp, but either the administrator has not installed a router or the router is not selecting this route.
+
+
+
+
+4.1 if you seen any errors related to registry  1 place to look you might missed to add insecure-registry like to docker file if that one also not worked try this below one 
+
+https://blog.hostonnet.com/did-not-detect-insecure-registry-argument-docker-daemon
+
+
+/etc/default/docker, added line
+1
+	
+DOCKER_OPTS="--insecure-registry 172.30.0.0/16"
+
+But for some reason, docker will not take this after i restart.
+
+This is fixed by editing systemd unit for docker at
+1
+	
+vi /etc/systemd/system/multi-user.target.wants/docker.service
+
+Find
+1
+	
+/usr/bin/dockerd -H fd:// 
+
+Replace with
+1
+	
+/usr/bin/dockerd --insecure-registry 172.30.0.0/16 -H fd:// 
+
+Now reload systemd
+1
+	
+systemctl daemon-reload
+
+Restart docker
+1
+2
+	
+systemctl stop docker
+systemctl start docker

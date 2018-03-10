@@ -1,4 +1,6 @@
 # devops
+install instructons is here https://linoxide.com/linux-how-to/setup-openshift-origin-centos-7/
+
 this is my first project for devops 
 
 oc command not found error on other placess and you have to use only ./oc  to fid this please run below command from your oc home path 
